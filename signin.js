@@ -1,5 +1,7 @@
 var querystring = require('querystring');
 var security = require('./security.js');
+var securityToken = require('./securityToken.js');
+
 
 module.exports = {
     execute : function (event, dynamodb) {
@@ -29,6 +31,8 @@ module.exports = {
                      }
                  }     
                });
+        }).then(function(res){
+            return securityToken.createToken(res, dynamodb);
         });
     },
     name : function(){
