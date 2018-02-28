@@ -1,10 +1,9 @@
-// import dynamo service
+// import AWS dependencies
+var AWS = require('aws-sdk');
 var DynamoDB = require('aws-sdk/clients/dynamodb');
 var APIGateway = require('aws-sdk/clients/apigateway');
-
+//internal dependencies
 var httpHandler = require('./httpHandler');
-
-var dynamodb = new DynamoDB({apiVersion: '2012-08-10'});
 
 exports.handler = (event, context, callback) => {
     httpHandler.handle(event)
