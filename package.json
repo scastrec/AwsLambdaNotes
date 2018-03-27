@@ -11,7 +11,7 @@
     "start": "node main.js"
   },
   "devDependencies": {
-    "@types/node": "^8.5.2",    
+    "@types/node": "^8.5.2",
     "tslint": "^3.15.1",
     "typescript": "2.0.0"
   }

@@ -10,6 +10,7 @@ phases:
       - npm install
 artifacts:
   files:
-    - ./
+    - *
+    - **/*
   discard-paths: yes
   base-directory: location
