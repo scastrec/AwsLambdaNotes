@@ -1,0 +1,15 @@
+version: 0.2
+
+env:
+  variables:
+    env: prod
+            
+phases:
+  install:
+    commands:
+      - npm install
+artifacts:
+  files:
+    - ./
+  discard-paths: yes
+  base-directory: location
